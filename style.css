@@ -1,0 +1,1022 @@
+/*=========================
+    VARIABLES
+=========================*/
+
+:root{
+    --fondo:#050505;
+    --texto:#F8F8F8;
+    --dorado:#C8A96A;
+    --gris:#B8B8B8;
+}
+
+/*=========================
+    RESET
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Montserrat",sans-serif;
+    background:#050505;
+    color:var(--texto);
+    overflow-x:hidden;
+}
+
+/*=========================
+    BASE
+=========================*/
+
+.contenedor{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+section{
+    padding:110px 20px;
+}
+
+.titulo-seccion{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    margin-bottom:60px;
+}
+
+.titulo-seccion h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:3rem;
+    font-weight:300;
+    color:white;
+}
+
+.linea{
+    width:100px;
+    height:1px;
+    background:var(--dorado);
+    opacity:.45;
+}
+
+.titulo-seccion .linea{
+    width:90px;
+}
+
+/*=========================
+    HERO
+=========================*/
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.estrellas{
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle,#ffffff 1px,transparent 1.6px),
+    radial-gradient(circle,#ffffffaa 1px,transparent 1.6px),
+    radial-gradient(circle,#ffffff77 1.5px,transparent 2px);
+    background-size:240px 240px, 380px 380px, 600px 600px;
+    background-position:0 0, 120px 60px, 80px 180px;
+    opacity:.12;
+}
+
+.contenido{
+    position:relative;
+    z-index:2;
+    width:90%;
+    max-width:700px;
+    text-align:center;
+    transform:translateY(-60px);
+}
+
+.logo{
+    width:210px;
+    margin:auto;
+    margin-bottom:8px;
+    display:block;
+    filter:drop-shadow(0 0 28px rgba(255,255,255,.12));
+}
+
+.fecha{
+    color:var(--dorado);
+    letter-spacing:7px;
+    margin-bottom:12px;
+    font-size:.95rem;
+}
+
+h1{
+    font-family:"Cormorant Garamond",serif;
+    font-weight:300;
+    font-size:clamp(4.5rem,9vw,7rem);
+    line-height:1.05;
+}
+
+h1 span{
+    display:block;
+    margin:8px 0;
+    color:var(--dorado);
+    font-size:2rem;
+    font-family:"Montserrat";
+}
+
+.detalle-portada{
+    margin-top:55px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+}
+
+.detalle-portada p{
+    color:var(--dorado);
+    letter-spacing:6px;
+    font-size:.8rem;
+}
+
+.scroll{
+    margin-top:45px;
+    color:#8A8A8A;
+    animation:subirBajar 2s infinite;
+}
+
+@keyframes subirBajar{
+    0%{ transform:translateY(0); }
+    50%{ transform:translateY(8px); }
+    100%{ transform:translateY(0); }
+}
+
+/*=========================
+    NUESTRA HISTORIA
+=========================*/
+
+.historia{
+    padding-top:100px;
+}
+
+.intro{
+    font-size:1.2rem;
+    color:#D8D8D8;
+    margin-bottom:18px;
+}
+
+.intro-destacado{
+    font-family:"Cormorant Garamond",serif;
+    font-size:2rem;
+    color:var(--dorado);
+    margin-bottom:45px;
+}
+
+.texto{
+    max-width:700px;
+    margin:18px auto;
+    line-height:2;
+    color:#CFCFCF;
+    font-size:1rem;
+}
+
+/*=========================
+    CEREMONIAS
+=========================*/
+
+.tarjetas-evento{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+    margin-top:60px;
+}
+
+.tarjeta,
+.dress-card,
+.tarjeta-regalo,
+.opcion{
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(200,169,106,.18);
+    border-radius:18px;
+    transition:.35s;
+}
+
+.tarjeta:hover,
+.dress-card:hover,
+.tarjeta-regalo:hover,
+.opcion:hover{
+    transform:translateY(-5px);
+    border-color:rgba(200,169,106,.45);
+}
+
+.tarjeta{
+    padding:40px;
+    text-align:center;
+    backdrop-filter:blur(6px);
+}
+
+.icono{
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+.tarjeta h3,
+.dress-card h3,
+.cabecera-regalo h3,
+.opcion-contenido h3{
+    font-family:"Cormorant Garamond",serif;
+    font-size:2rem;
+    font-weight:300;
+    margin-bottom:15px;
+}
+
+.hora{
+    color:var(--dorado);
+    letter-spacing:3px;
+    margin-bottom:18px;
+}
+
+.tarjeta p{
+    color:#D3D3D3;
+    line-height:1.8;
+}
+
+.boton,
+.boton-datos,
+.boton-confirmar,
+.boton-contacto,
+.boton-playlist{
+    display:inline-block;
+    text-decoration:none;
+    background:none;
+    border:1px solid rgba(200,169,106,.45);
+    color:var(--dorado);
+    cursor:pointer;
+    transition:.35s;
+}
+
+.boton,
+.boton-datos{
+    margin-top:28px;
+    padding:12px 28px;
+    border-radius:30px;
+}
+
+.boton:hover,
+.boton-datos:hover,
+.boton-confirmar:hover{
+    background:var(--dorado);
+    color:#050505;
+}
+
+/*=========================
+    DRESS CODE
+=========================*/
+
+.dress-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+    margin-top:60px;
+}
+
+.dress-card{
+    padding:40px;
+    text-align:center;
+}
+
+.dress-icono{
+    font-size:2.8rem;
+    margin-bottom:18px;
+}
+
+.dress-card p{
+    color:#D3D3D3;
+    line-height:1.9;
+}
+
+/*=========================
+    PLAYLIST
+=========================*/
+
+.icono-playlist{
+    text-align:center;
+    font-size:3rem;
+    color:var(--dorado);
+    margin:35px 0;
+    opacity:.85;
+}
+
+.playlist-texto{
+    text-align:center;
+    font-family:"Cormorant Garamond",serif;
+    font-size:2rem;
+    font-weight:300;
+    margin-bottom:28px;
+}
+
+.playlist-descripcion{
+    max-width:680px;
+    margin:auto;
+    text-align:center;
+    line-height:2;
+    color:#D4D4D4;
+}
+
+.boton-playlist{
+    margin-top:45px;
+    padding:14px 36px;
+    color:var(--texto);
+    letter-spacing:2px;
+}
+
+.boton-playlist:hover,
+.boton-contacto:hover{
+    background:rgba(200,169,106,.12);
+    border-color:var(--dorado);
+}
+
+.playlist-nota{
+    margin-top:22px;
+    text-align:center;
+    color:#AFAFAF;
+    font-size:.85rem;
+    letter-spacing:.5px;
+    font-style:italic;
+}
+
+/*=========================
+    REGALOS
+=========================*/
+
+.texto-regalos{
+    max-width:720px;
+    margin:0 auto 60px;
+    text-align:center;
+    line-height:2;
+    color:#D6D6D6;
+}
+
+.tarjeta-regalo{
+    max-width:760px;
+    margin:30px auto;
+    padding:35px;
+}
+
+.cabecera-regalo{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:18px;
+}
+
+.icono-regalo{
+    font-size:2.3rem;
+}
+
+.cabecera-regalo p{
+    color:#CCCCCC;
+    line-height:1.8;
+}
+
+.datos-banco{
+    max-height:0;
+    overflow:hidden;
+    transition:.45s ease;
+}
+
+.datos-banco.abierto{
+    max-height:800px;
+    margin-top:30px;
+}
+
+.fila-dato{
+    display:grid;
+    grid-template-columns:120px 1fr auto;
+    gap:20px;
+    align-items:center;
+    padding:14px 0;
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.fila-dato span{
+    color:#AAAAAA;
+}
+
+.fila-dato strong{
+    font-weight:400;
+}
+
+.fila-dato button{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    background:rgba(255,255,255,.05);
+    color:var(--dorado);
+    transition:.3s;
+}
+
+.fila-dato button:hover{
+    background:var(--dorado);
+    color:#050505;
+}
+
+/*=========================
+    QUIENES NOS ACOMPAÑAN
+=========================*/
+
+.texto-acompanan{
+    max-width:700px;
+    margin:0 auto 60px;
+    text-align:center;
+    line-height:2;
+    color:#D6D6D6;
+}
+
+.bloque-acompanan{
+    max-width:520px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.titulo-bloque{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-bottom:12px;
+}
+
+.titulo-bloque span{
+    font-size:1.2rem;
+}
+
+.titulo-bloque h3{
+    font-family:"Cormorant Garamond",serif;
+    font-size:2rem;
+    font-weight:300;
+}
+
+.bloque-acompanan p{
+    line-height:1.8;
+    color:#D6D6D6;
+}
+
+.separador-fino{
+    width:220px;
+    height:1px;
+    background:rgba(200,169,106,.18);
+    margin:35px auto;
+}
+
+.separador{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    margin:42px auto;
+    max-width:520px;
+}
+
+.separador::before,
+.separador::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:rgba(200,169,106,.35);
+}
+
+.separador span{
+    position:relative;
+    top:-2px;
+    color:var(--dorado);
+    font-size:1rem;
+}
+
+.agradecimiento{
+    max-width:620px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.agradecimiento h3{
+    font-family:"Cormorant Garamond",serif;
+    font-size:2.2rem;
+    font-weight:300;
+    margin-bottom:25px;
+}
+
+.agradecimiento p{
+    line-height:2;
+    color:#D2D2D2;
+    padding-bottom:55px;
+    border-bottom:1px solid rgba(200,169,106,.18);
+}
+
+/*=========================
+    CUENTA REGRESIVA
+=========================*/
+
+.contador-texto{
+    text-align:center;
+    color:#D3D3D3;
+    margin-bottom:60px;
+    line-height:1.9;
+}
+
+.reloj{
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+.tiempo{
+    width:120px;
+    padding:28px 18px;
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(200,169,106,.18);
+    border-radius:18px;
+    text-align:center;
+}
+
+.tiempo span{
+    display:block;
+    font-size:3rem;
+    font-family:"Cormorant Garamond",serif;
+    color:var(--dorado);
+}
+
+.tiempo small{
+    color:#BBBBBB;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.fecha-boda{
+    text-align:center;
+    margin-top:50px;
+    color:#8D8D8D;
+    letter-spacing:4px;
+    font-size:.9rem;
+}
+
+/*=========================
+    CONFIRMACIÓN
+=========================*/
+
+.confirmacion-texto{
+    max-width:650px;
+    margin:0 auto 60px;
+    text-align:center;
+    line-height:1.9;
+    color:#D2D2D2;
+}
+
+.opciones{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.opcion{
+    position:relative;
+    cursor:pointer;
+    padding:35px;
+}
+
+.opcion input{
+    display:none;
+}
+
+.opcion-contenido{
+    text-align:center;
+}
+
+.icono-opcion{
+    font-size:2.4rem;
+    margin-bottom:18px;
+}
+
+.opcion-contenido p{
+    color:#CFCFCF;
+}
+
+.check{
+    position:absolute;
+    top:18px;
+    right:20px;
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    background:var(--dorado);
+    color:#050505;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    transform:scale(.5);
+    transition:.3s;
+}
+
+.opcion:has(input:checked){
+    border:2px solid var(--dorado);
+    box-shadow:0 0 30px rgba(200,169,106,.18);
+}
+
+.opcion:has(input:checked) .check{
+    opacity:1;
+    transform:scale(1);
+}
+
+.boton-confirmar{
+    margin:55px auto 0;
+    display:block;
+    padding:14px 38px;
+    border-radius:40px;
+    font-size:1rem;
+}
+
+#mensaje-error{
+    text-align:center;
+    color:var(--dorado);
+    margin-top:22px;
+    opacity:0;
+    transition:.3s;
+}
+
+/*=========================
+    CONTACTO
+=========================*/
+
+.icono-contacto{
+    text-align:center;
+    font-size:2.8rem;
+    color:var(--dorado);
+    margin:35px 0;
+    opacity:.85;
+}
+
+.contacto-texto{
+    max-width:700px;
+    margin:45px auto 55px;
+    text-align:center;
+    line-height:2;
+    color:#D4D4D4;
+}
+
+.contacto-botones{
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+.boton-contacto{
+    padding:14px 34px;
+    min-width:180px;
+    text-align:center;
+    color:var(--texto);
+    letter-spacing:1px;
+}
+
+/*=========================
+    DESPEDIDA
+=========================*/
+
+.despedida{
+    padding:120px 20px 30px;
+    text-align:center;
+}
+
+.separador-despedida{
+    margin:0 auto 70px;
+}
+
+.despedida-frase{
+    max-width:700px;
+    margin:0 auto 70px;
+    line-height:2;
+    color:#D6D6D6;
+    font-size:1.05rem;
+}
+
+.despedida h2{
+    font-family:"Cormorant Garamond",serif;
+    font-weight:300;
+    font-size:3.5rem;
+    line-height:1.1;
+    margin-bottom:22px;
+}
+
+.despedida h2 span{
+    color:var(--dorado);
+}
+
+.despedida-fecha{
+    color:var(--dorado);
+    letter-spacing:5px;
+    font-size:.9rem;
+    margin-bottom:55px;
+}
+
+.despedida-final{
+    color:#AFAFAF;
+    font-size:.95rem;
+    font-style:italic;
+    margin-bottom:70px;
+}
+
+.despedida-logo{
+    width:120px;
+    display:block;
+    margin:0 auto;
+    opacity:.18;
+    filter:grayscale(100%);
+    animation:respirar 6s ease-in-out infinite;
+}
+
+@keyframes respirar{
+    0%{
+        transform:scale(1);
+        opacity:.16;
+    }
+
+    50%{
+        transform:scale(1.04);
+        opacity:.24;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:.16;
+    }
+}
+
+/*=========================
+    RESPONSIVE
+=========================*/
+
+@media(max-width:700px){
+
+    section{
+        padding:90px 20px;
+    }
+
+    .contenido{
+        transform:translateY(-50px);
+    }
+
+    .logo{
+        width:160px;
+    }
+
+    h1{
+        font-size:4rem;
+    }
+
+    .fecha{
+        letter-spacing:4px;
+        font-size:.85rem;
+    }
+
+    .detalle-portada{
+        gap:10px;
+    }
+
+    .linea{
+        width:60px;
+    }
+
+    .titulo-seccion{
+        gap:10px;
+        margin-bottom:48px;
+    }
+
+    .titulo-seccion h2{
+        font-size:2.4rem;
+    }
+
+    .tarjetas-evento,
+    .dress-grid,
+    .opciones{
+        grid-template-columns:1fr;
+    }
+
+    .fila-dato{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .fila-dato button{
+        margin:auto;
+    }
+
+    .despedida h2{
+        font-size:3rem;
+    }
+}
+
+/*=========================
+    ANIMACIONES SCROLL
+=========================*/
+
+.aparecer{
+    opacity:0;
+    transform:translateY(28px);
+    transition:
+        opacity .9s ease,
+        transform .9s ease;
+}
+
+.aparecer.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/*=========================
+    ICONOS LUCIDE
+=========================*/
+
+.icono svg,
+.dress-icono svg,
+.icono-playlist svg,
+.icono-regalo svg,
+.icono-opcion svg,
+.icono-contacto svg,
+.titulo-bloque svg{
+    width:42px;
+    height:42px;
+    stroke:var(--dorado);
+    stroke-width:1.3;
+}
+
+.titulo-bloque svg{
+    width:22px;
+    height:22px;
+}
+
+.icono,
+.dress-icono,
+.icono-playlist,
+.icono-regalo,
+.icono-opcion,
+.icono-contacto{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/*=========================
+    AJUSTE MÓVIL FINAL
+=========================*/
+
+@media(max-width:700px){
+
+    body{
+        width:100%;
+        overflow-x:hidden;
+    }
+
+    section{
+        padding:80px 18px;
+    }
+
+    .contenedor{
+        width:100%;
+        max-width:100%;
+    }
+
+    .titulo-seccion{
+        gap:8px;
+        margin-bottom:42px;
+    }
+
+    .titulo-seccion h2{
+        font-size:2.15rem;
+        line-height:1.1;
+        max-width:220px;
+    }
+
+    .titulo-seccion .linea{
+        width:45px;
+    }
+
+    .texto,
+    .texto-regalos,
+    .texto-acompanan,
+    .playlist-descripcion,
+    .contacto-texto,
+    .confirmacion-texto,
+    .contador-texto,
+    .despedida-frase{
+        max-width:100%;
+        line-height:1.75;
+        font-size:.95rem;
+    }
+
+    .tarjeta,
+    .dress-card,
+    .tarjeta-regalo,
+    .opcion,
+    .tiempo{
+        width:100%;
+        max-width:100%;
+    }
+
+    .tarjeta,
+    .dress-card,
+    .tarjeta-regalo,
+    .opcion{
+        padding:28px 20px;
+    }
+
+    .boton,
+    .boton-playlist,
+    .boton-contacto,
+    .boton-confirmar,
+    .boton-datos{
+        max-width:100%;
+        white-space:normal;
+        line-height:1.4;
+    }
+
+    .contacto-botones{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .boton-contacto{
+        width:100%;
+        max-width:280px;
+    }
+
+    .reloj{
+        gap:14px;
+    }
+
+    .tiempo{
+        width:135px;
+    }
+
+    .fecha-boda{
+        line-height:1.6;
+        letter-spacing:2px;
+    }
+
+    .despedida{
+        padding-bottom:60px;
+    }
+}
+
+/*=========================
+    DATOS CONTACTO
+=========================*/
+
+.boton-ver-contacto{
+    display:block;
+    margin:28px auto 0;
+    background:none;
+    border:none;
+    color:var(--dorado);
+    cursor:pointer;
+    font-size:.9rem;
+    letter-spacing:1px;
+    opacity:.85;
+}
+
+.datos-contacto{
+    max-height:0;
+    overflow:hidden;
+    transition:.4s ease;
+    margin-top:0;
+    text-align:center;
+}
+
+.datos-contacto.abierto{
+    max-height:140px;
+    margin-top:24px;
+}
+
+.datos-contacto p{
+    color:#CFCFCF;
+    line-height:1.8;
+    font-size:.95rem;
+}
+
+.datos-contacto strong{
+    color:var(--dorado);
+    font-weight:400;
+}
