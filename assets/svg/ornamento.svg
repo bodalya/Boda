@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 260 80"
+     fill="none">
+
+    <path
+        d="M130 40
+           C112 22 88 22 70 40
+           C52 58 28 58 14 42
+           C4 30 14 16 28 22
+           C42 28 34 44 22 40"
+        stroke="#C8A96A"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+    <path
+        d="M130 40
+           C148 22 172 22 190 40
+           C208 58 232 58 246 42
+           C256 30 246 16 232 22
+           C218 28 226 44 238 40"
+        stroke="#C8A96A"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+    <path
+        d="M130 40
+           C112 54 96 54 84 42
+           C72 30 58 32 50 44"
+        stroke="#C8A96A"
+        stroke-width="1.1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        opacity=".55"/>
+
+    <path
+        d="M130 40
+           C148 54 164 54 176 42
+           C188 30 202 32 210 44"
+        stroke="#C8A96A"
+        stroke-width="1.1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        opacity=".55"/>
+
+    <circle cx="130" cy="40" r="2.4" fill="#C8A96A" opacity=".75"/>
+
+</svg>

@@ -25,7 +25,12 @@ html{
 
 body{
     font-family:"Montserrat",sans-serif;
-    background:#050505;
+    background:
+        radial-gradient(circle at top center,
+        rgba(255,255,255,.025),
+        transparent 45%),
+        #050505;
+
     color:var(--texto);
     overflow-x:hidden;
 }
@@ -1019,4 +1024,37 @@ h1 span{
 .datos-contacto strong{
     color:var(--dorado);
     font-weight:400;
+}
+
+/*=========================
+    DECORACIÓN LATERAL
+=========================*/
+
+.decoracion{
+    position:fixed;
+    top:50%;
+    width:230px;
+    height:70px;
+    background:url("assets/svg/ornamento.svg")
+    center center/contain
+    no-repeat;
+    opacity:.38;
+    z-index:900;
+    pointer-events:none;
+}
+
+.decoracion-izquierda{
+    left:-75px;
+    transform:translateY(-50%) rotate(90deg);
+}
+
+.decoracion-derecha{
+    right:-75px;
+    transform:translateY(-50%) rotate(-90deg);
+}
+
+@media(max-width:700px){
+    .decoracion{
+        display:none;
+    }
 }
