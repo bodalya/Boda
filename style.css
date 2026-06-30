@@ -401,7 +401,7 @@ h1 span{
 }
 
 .datos-banco.abierto{
-    max-height:800px;
+    max-height:1200px;
     margin-top:30px;
 }
 
@@ -1057,4 +1057,12 @@ h1 span{
     .decoracion{
         display:none;
     }
+}
+
+@media(max-width:700px){
+
+    .datos-banco.abierto{
+        max-height:1400px;
+    }
+
 }
